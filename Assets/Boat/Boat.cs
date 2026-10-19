@@ -38,7 +38,7 @@ public class Boat : MonoBehaviour
     void FixedUpdate()
     {
         _velocity *= 1 - (DRAG * Time.fixedDeltaTime);
-        float sailForce = Mathf.Clamp01(1 - Mathf.Abs(
+        float sailForce = Mathf.Clamp01(1.1f - Mathf.Abs(
             Vector2.Dot(GameController.WindDirection, Quaternion.AngleAxis(_sailDirection + _hullDirection, Vector3.forward) * Vector2.right) -
             Vector2.Dot(Quaternion.AngleAxis(_hullDirection, Vector3.forward) * Vector2.right, Quaternion.AngleAxis(_sailDirection + _hullDirection, Vector3.forward) * Vector2.right)
         )) * SAIL_ANGLE_DISCREPANCY_FORCE_LOSS;
@@ -46,6 +46,7 @@ public class Boat : MonoBehaviour
         _velocity += (Vector2)(Quaternion.AngleAxis(_hullDirection, Vector3.forward) * Vector2.right) * sailForce  * MAX_ACCELERATION * _sailFullness * Time.fixedDeltaTime;
 
         transform.position += new Vector3(_velocity.x,0,-_velocity.y) * Time.fixedDeltaTime;
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x,-_waterGenerator.Size.x/2,_waterGenerator.Size.x/2),0,Mathf.Clamp(transform.position.z,-_waterGenerator.Size.y/2,_waterGenerator.Size.y/2));
     }
 
     void ReadInput()
