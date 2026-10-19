@@ -3,8 +3,8 @@ using UnityEngine;
 public class Boat : MonoBehaviour
 {
     // these could be parametrized if need be
-    const float DRAG = 0.3f;
-    const float MAX_ACCELERATION = 5;
+    const float DRAG = 0.04f;
+    const float MAX_ACCELERATION = 1;
     const float SAIL_ANGLE_DISCREPANCY_FORCE_LOSS = 1;
     const float SAIL_DIRECTION_LIMIT = 45;
 
@@ -38,11 +38,11 @@ public class Boat : MonoBehaviour
             Vector2.Dot(GameController.WindDirection, Quaternion.AngleAxis(_sailDirection + _hullDirection, Vector3.forward) * Vector2.right) -
             Vector2.Dot(Quaternion.AngleAxis(_hullDirection, Vector3.forward) * Vector2.right, Quaternion.AngleAxis(_sailDirection + _hullDirection, Vector3.forward) * Vector2.right)
         )) * SAIL_ANGLE_DISCREPANCY_FORCE_LOSS;
-        Debug.Log(sailForce);
+        //Debug.Log(sailForce);
         _velocity += (Vector2)(Quaternion.AngleAxis(_hullDirection, Vector3.forward) * Vector2.right) * sailForce  * MAX_ACCELERATION * _sailFullness * Time.fixedDeltaTime;
 
         transform.position += new Vector3(_velocity.x,0,-_velocity.y) * Time.fixedDeltaTime;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x,-_waterGenerator.Size.x/2,_waterGenerator.Size.x/2),0,Mathf.Clamp(transform.position.z,-_waterGenerator.Size.y/2,_waterGenerator.Size.y/2));
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x,-_waterGenerator.Size.x/2+1,_waterGenerator.Size.x/2-1),0,Mathf.Clamp(transform.position.z,-_waterGenerator.Size.y/2+1,_waterGenerator.Size.y/2-1));
     }
 
     void ReadInput()

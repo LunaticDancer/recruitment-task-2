@@ -1,0 +1,4 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Label text="Label" name="Angle" style="background-color: rgb(255, 255, 255); font-size: 28px; -unity-font-style: bold; align-items: center; justify-content: flex-start; align-self: flex-start; align-content: center; min-width: 160px; -unity-text-align: middle-center; min-height: 64px; bottom: 16px; left: 16px; top: auto; right: auto; position: absolute;"/>
+    <ui:Label text="Label" name="Sail" style="background-color: rgb(255, 255, 255); font-size: 28px; -unity-font-style: bold; align-items: center; justify-content: flex-start; align-self: flex-start; align-content: center; min-width: 160px; -unity-text-align: middle-center; min-height: 64px; position: absolute; right: 16px; bottom: 16px;"/>
+</ui:UXML>

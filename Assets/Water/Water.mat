@@ -106,7 +106,7 @@ Material:
     - Vector1_658dd7290ddf47ed956f88d018d0f713: 1
     - Vector1_67c4ddfd82b04e58b0214622f0432991: 10
     - Vector1_946edd544b28409cab9e288c6e37417e: 2
-    - Vector1_a54dd376200a4449991da3414d0040d1: 1
+    - Vector1_a54dd376200a4449991da3414d0040d1: 0.1
     - Vector1_c6a2240af5054ae2a753851907518436: 0.3
     - Vector1_f8fc92e9e1144df3a8239b0e913dbd4c: 0.5
     - _AddPrecomputedVelocity: 0
