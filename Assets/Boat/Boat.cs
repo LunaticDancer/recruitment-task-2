@@ -52,7 +52,7 @@ public class Boat : MonoBehaviour
     {
         _sailFullness = Mathf.Clamp01(_sailFullness + _input.Player.Sail.ReadValue<Vector2>().y * 0.5f * Time.deltaTime);
         _sailDirection = Mathf.Clamp(_sailDirection + _input.Player.Sail.ReadValue<Vector2>().x * 60 * Time.deltaTime, -SAIL_DIRECTION_LIMIT, SAIL_DIRECTION_LIMIT);
-        _hullDirection += _input.Player.Rudder.ReadValue<float>() * 15 * Time.deltaTime;
+        _hullDirection += _input.Player.Rudder.ReadValue<float>() * 10 * Time.deltaTime * _velocity.magnitude;
     }
 
     void UpdateVisuals()
