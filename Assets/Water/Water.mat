@@ -95,6 +95,20 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Vector1_0182d81c080c465f897679465b696d68: 1
+    - Vector1_0ea39f2c071f46ab897bb1960484cf9c: 0.3
+    - Vector1_230db2d796f447158b69e1258adb6c77: 20.08
+    - Vector1_3627f86d64ae482fac0b26c8db8d63ea: 1
+    - Vector1_4335c9c07eab4f8697d47cfc96a5f10c: 2
+    - Vector1_5fde7a1eddd1440e80761d6939a838b0: 2
+    - Vector1_608c151407d64e4aa998ffd99cd08c70: 1
+    - Vector1_6179707d2b91461bb3422e707c765c3a: 2
+    - Vector1_658dd7290ddf47ed956f88d018d0f713: 1
+    - Vector1_67c4ddfd82b04e58b0214622f0432991: 1
+    - Vector1_946edd544b28409cab9e288c6e37417e: 2
+    - Vector1_a54dd376200a4449991da3414d0040d1: 1
+    - Vector1_c6a2240af5054ae2a753851907518436: 0.3
+    - Vector1_f8fc92e9e1144df3a8239b0e913dbd4c: 0.5
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
@@ -129,6 +143,12 @@ Material:
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_10e81808532d4de395d3d34bf5015751: {r: 0.8922749, g: 0.9811321, b: 0.95218486, a: 1}
+    - Color_1ccc8e5e4a1c4a02a1af79aba955e6fe: {r: 0.34763256, g: 0.76714146, b: 0.8490566, a: 1}
+    - Color_c7f2e0937a0e416aad6b5081457d47ed: {r: 0.19728994, g: 0.36199993, b: 0.34252095, a: 0.31764707}
+    - Color_ffa539d45a7f45b8a3fc442392a544b3: {r: 0.66042185, g: 0.9150943, b: 0.74831766, a: 0.20392157}
+    - Vector2_6a5f4aea22724461afd128e15a84e792: {r: 1, g: 0.75, b: 0, a: 0}
+    - _Albedo: {r: 0.11449797, g: 0.7830188, b: 0.6748235, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

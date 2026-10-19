@@ -82,6 +82,7 @@ public class WaterGenerator : MonoBehaviour
         mesh.triangles = triangles;
         mesh.normals = normals;
         mesh.RecalculateBounds();
+        mesh.RecalculateNormals();
 
         GetComponent<MeshFilter>().mesh = mesh;
     }
