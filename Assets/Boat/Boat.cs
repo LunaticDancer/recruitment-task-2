@@ -6,7 +6,7 @@ public class Boat : MonoBehaviour
     const float DRAG = 0.2f;
     const float MAX_ACCELERATION = 5;
     const float SAIL_ANGLE_DISCREPANCY_FORCE_LOSS = 1;
-    const float SAIL_DIRECTION_LIMIT = 90;
+    const float SAIL_DIRECTION_LIMIT = 45;
 
     [SerializeField] WaterGenerator _waterGenerator;
     [SerializeField] Transform _sail;
