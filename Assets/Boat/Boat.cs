@@ -3,7 +3,7 @@ using UnityEngine;
 public class Boat : MonoBehaviour
 {
     // these could be parametrized if need be
-    const float DRAG = 0.2f;
+    const float DRAG = 0.3f;
     const float MAX_ACCELERATION = 5;
     const float SAIL_ANGLE_DISCREPANCY_FORCE_LOSS = 1;
     const float SAIL_DIRECTION_LIMIT = 45;
@@ -24,21 +24,17 @@ public class Boat : MonoBehaviour
         _input.Player.Enable();
     }
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         ReadInput();
         UpdateVisuals();
+        UpdateLabels();
     }
 
     void FixedUpdate()
     {
         _velocity *= 1 - (DRAG * Time.fixedDeltaTime);
-        float sailForce = Mathf.Clamp01(1.1f - Mathf.Abs(
+        float sailForce = Mathf.Clamp01(1f - Mathf.Abs(
             Vector2.Dot(GameController.WindDirection, Quaternion.AngleAxis(_sailDirection + _hullDirection, Vector3.forward) * Vector2.right) -
             Vector2.Dot(Quaternion.AngleAxis(_hullDirection, Vector3.forward) * Vector2.right, Quaternion.AngleAxis(_sailDirection + _hullDirection, Vector3.forward) * Vector2.right)
         )) * SAIL_ANGLE_DISCREPANCY_FORCE_LOSS;
@@ -61,6 +57,12 @@ public class Boat : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, _hullDirection, 0);
         _sail.localEulerAngles = new Vector3(0, _sailDirection, 0);
         _sailMaterial.materials[0].SetFloat("_Percent", _sailFullness);
+    }
+
+    void UpdateLabels()
+    {
+        UserInterface.Instance.SetAngle(_sailDirection);
+        UserInterface.Instance.SetSail(_sailFullness);
     }
 
     public void SetWaterGenerator(WaterGenerator wg)
