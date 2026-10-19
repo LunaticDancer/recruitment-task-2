@@ -42,7 +42,8 @@ public class Boat : MonoBehaviour
         _velocity += (Vector2)(Quaternion.AngleAxis(_hullDirection, Vector3.forward) * Vector2.right) * sailForce  * MAX_ACCELERATION * _sailFullness * Time.fixedDeltaTime;
 
         transform.position += new Vector3(_velocity.x,0,-_velocity.y) * Time.fixedDeltaTime;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x,-_waterGenerator.Size.x/2+1,_waterGenerator.Size.x/2-1),0,Mathf.Clamp(transform.position.z,-_waterGenerator.Size.y/2+1,_waterGenerator.Size.y/2-1));
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x,-_waterGenerator.Size.x/2+1,_waterGenerator.Size.x/2-1),0,Mathf.Clamp(transform.position.z,
+            -_waterGenerator.Size.y/2+1,_waterGenerator.Size.y/2-1));
     }
 
     void ReadInput()
