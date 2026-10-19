@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    const float WIND_VARIANCE = 4;
+    const float WIND_VARIANCE = 3;
     public static GameController Instance;
     public static Vector2 WindDirection;
     [SerializeField] WaterGenerator _waterGenerator;
