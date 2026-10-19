@@ -271,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Boat
   _waterGenerator: {fileID: 0}
   _sail: {fileID: 1965179875}
-  _sailMaterial: {fileID: 0}
+  _sailMaterial: {fileID: 1965179876}
 --- !u!1 &377502607
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   _target: {fileID: 0}
-  _followIntensity: 1
+  _followIntensity: 2
 --- !u!1 &1171459121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,6 +2003,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4731406356249687433, guid: ddc8d4003d3aafe63a88e1e9a1cdf4f4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c087ae0aeda278c98a29af093c6a15ef, type: 2}
     - target: {fileID: 6055773947174203442, guid: ddc8d4003d3aafe63a88e1e9a1cdf4f4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2019,6 +2023,11 @@ PrefabInstance:
 --- !u!4 &1965179875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2697417519326995846, guid: ddc8d4003d3aafe63a88e1e9a1cdf4f4, type: 3}
+  m_PrefabInstance: {fileID: 1821765472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1965179876 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4731406356249687433, guid: ddc8d4003d3aafe63a88e1e9a1cdf4f4, type: 3}
   m_PrefabInstance: {fileID: 1821765472}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2086746719

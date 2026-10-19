@@ -10,7 +10,7 @@ public class Boat : MonoBehaviour
 
     [SerializeField] WaterGenerator _waterGenerator;
     [SerializeField] Transform _sail;
-    [SerializeField] Material _sailMaterial;
+    [SerializeField] MeshRenderer _sailMaterial;
 
     private Vector2 _velocity;
     private float _hullDirection;
@@ -59,6 +59,7 @@ public class Boat : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, _hullDirection, 0);
         _sail.localEulerAngles = new Vector3(0, _sailDirection, 0);
+        _sailMaterial.materials[0].SetFloat("_Percent", _sailFullness);
     }
 
     public void SetWaterGenerator(WaterGenerator wg)
